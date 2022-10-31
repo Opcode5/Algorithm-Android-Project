@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">Algorithm</string>
+    <string name="bfs">
+        Breadth First Search (BFS)\n\n
+        There are many ways to traverse graphs. BFS is the most commonly used approach.
+        BFS is a traversing algorithm where you should start traversing from a selected node (source or starting node) and traverse the graph layerwise thus exploring the neighbour nodes (nodes which are directly connected to source node). You must then move towards the next-level neighbour nodes.
+        As the name BFS suggests, you are required to traverse the graph breadthwise as follows:\n\n
+        1. First move horizontally and visit all the nodes of the current layer\n
+        2. Move to the next layer\n\n
+        The distance between the nodes in layer 1 is comparatively lesser than the distance between the nodes in layer 2. Therefore, in BFS, you must traverse all the nodes in layer 1 before you move to the nodes in layer 2.\n\n
+        Traversing child nodes:\n\n
+        A graph can contain cycles, which may bring you to the same node again while traversing the graph. To avoid processing of same node again, use a boolean array which marks the node after it is processed.\n
+        To make this process easy, use a queue to store the node and mark it as visited until all its neighbours (vertices that are directly connected to it) are marked. The queue follows the First In First Out (FIFO) queuing method, and therefore, the neighbour of the node will be visited in the order in which they were inserted in the node i.e. the node that was inserted first will be visited first, and so on.\n
+    </string>
+    <string name="dfs">
+        Depth First Search (DFS)\n\n
+        The DFS algorithm is a recursive algorithm that uses the idea of backtracking. It involves exhaustive searches of all the nodes by going ahead, if possible, else by backtracking.\n
+        Here, the word backtrack means that when you are moving forward and there are no more nodes along the current path, you move backwards on the same path to find nodes to traverse. All the nodes will be visited on the current path till all the unvisited nodes have been traversed after which the next path will be selected.\n
+        This recursive nature of DFS can be implemented using stacks. The basic idea is as follows:\n\n
+        Pick a starting node and push all its adjacent nodes into a stack.\n
+        Pop a node from stack to select the next node to visit and push all its adjacent nodes into a stack.\n
+        Repeat this process until the stack is empty. However, ensure that the nodes that are visited are marked. This will prevent you from visiting the same node more than once. If you do not mark the nodes that are visited and you visit the same node more than once, you may end up in an infinite loop.\n\n
+    </string>
+    <string name="topsort">
+        TOPOLOGICAL SORT:\n\n
+        A topological sort is an ordering of vertices in a directed acyclic graph, such that if there is a path from vi to vj, then vj appears after vi in the linear ordering.\n
+        Topological ordering is not possible if the graph has a cycle, since for two vertices v and w on the cycle, v precedes w and w precedes v.\n
+        Steps for implementing the topological sort \n\n
+        Step 1: start dfs from starting node.\n
+        Step 2: visit all node adjacent to it.\n
+        Step 3: when there is no unvisited node from any node, push it to the stack.\n
+        Step 4: print all element of the stack .\n
+        Step 5: clear the stack.\n
+        Step 6: the printing order of the element is the topological sort.\n\\n
+    </string>
+    <string name="bst">
+        INORDER TRAVERSAL\n\n
+        The InOrder traversal is one of the three popular ways to traverse a binary tree data structure, the other two being the preOrder and postOrder. During the in-order traversal algorithm, the left subtree is explored first, followed by root, and finally nodes on the right subtree.\n
+        You start traversal from root then goes to the left node, then again goes to the left node until you reach a leaf node. At that point in time, you print the value of the node or mark it visited and moves to right subtree. Continuing the same algorithm until all nodes of the binary tree are visited. The InOrder traversal is also known as left-node-right or left-root-right traversal or LNR traversal algorithm.\n
+        Similar to the preOrder algorithm, it is also a depth-first algorithm because it explores the depth of a binary tree before exploring siblings. Since it is one of the fundamental binary tree algorithms it is  quite popular in programming interviews.\n
+        These traversal algorithms are also the basis to learn more advanced binary tree algorithms, hence every programmer should learn, understand and know how to implement in-order and other traversal algorithms.\n
+        The easiest way to implement the inOrder traversal algorithm in Java or any programming language is by using recursion. Since the binary tree is a recursive data structure, recursion is the natural choice for solving a tree-based problem. The inOrder() method in the BinaryTree class implements the logic to traverse a binary tree using recursion.\n
+        From Interview point of view, InOrder traversal is extremely important because it also prints nodes of a binary search tree in the sorted order but only if given tree is binary search tree. If you remember, in BST, the value of nodes in left subtree is lower than the root and values of nodes on right subtree is higher than root. The In order traversal literally means IN order i.e notes are printed in the order or sorted order.\n
+        steps for inorder traversal is given below:\n\n
+        step 1: visit the left node if it is unvisited\n
+        step 2: print the root node\n
+        step 3: visit the right node if it is unvisited\n\n
+    </string>
+    <string name="kruskal">
+        Kruskal algorithm is a minimum spanning tree algorithm that takes a graph as input and finds the subset of the edges of that graph which
+        form a tree that includes every vertex\n
+        has the minimum sum of weights among all the trees that can be formed from the graph\n
+        How Kruskal algorithm works:\n\n
+        It falls under a class of algorithms called greedy algorithms which find the local optimum in the hopes of finding a global optimum.\n
+        We start from the edges with the lowest weight and keep adding edges until we reach our goal.\n
+        The steps for implementing Kruskal algorithm are as follows:\n
+        step 1: Sort all the edges from low weight to high\n
+        step 2: Take the edge with the lowest weight and add it to the spanning tree. If adding the edge created a cycle, then reject this edge.\n
+        step 3: Keep adding edges until we reach all vertices.\n\n
+    </string>
+    <string name="prims">
+        Prims Algorithm:\n\n
+        Prims Algorithm is a famous greedy algorithm.\n
+        It is used for finding the Minimum Spanning Tree (MST) of a given graph.\n
+        To apply Prim’s algorithm, the given graph must be weighted, connected and undirected.\n
+        Prims Algorithm Implementation-\n
+        The implementation of Prims Algorithm is explained in the following steps-\n\n
+        Step-01:\n
+        Randomly choose any vertex.\n
+        The vertex connecting to the edge having least weight is usually selected.\n
+        Step-02:\n
+        Find all the edges that connect the tree to new vertices.\n
+        Find the least weight edge among those edges and include it in the existing tree.\n
+        If including that edge creates a cycle, then reject that edge and look for the next least weight edge\n
+        Step-03:\n
+        Keep repeating step-02 until all the vertices are included and Minimum Spanning Tree (MST) is obtained.\n\n
+    </string>
+    <string name="bubble">
+        Bubble sort algorithm:\n\n
+        If an array has to be sorted in ascending order, the bubble sort will start by comparing the first element of the array with the second element, if the first element is greater than the second element , it will swap both the elements, and then move on to compare the second and third element and so on\n
+        It is known as bubble sort, because with every complete iteration the largest element in the given array, bubbles up towards the last place or the highest index, just like a water bubble rises up to the water surface.\n
+        Sorting takes place by stepping through all the elements one-by-one and comparing it with the adjacent element and swapping them if required.\n
+        Implementing Bubble Sort Algorithm\n\nFollowing are the steps involved in bubble sort(for sorting a given array in ascending order):\n\n
+        step 1: Starting with the first element(index = 0), compare the current element with the next element of the array.\n
+        step 2: If the current element is greater than the next element of the array, swap them.\n
+        step 3: If the current element is less than the next element, move to the next element. Repeat Step 1.\n
+    </string>
+    <string name="selection">
+        Selection sort algorithm: \n\n
+        The Selection sort algorithm is based on the idea of finding the minimum or maximum element in an unsorted array and then putting it in its correct position in a sorted array.\n
+        Assume that the array A={7,5,4,2} needs to be sorted in ascending order.\m
+        The minimum element in the array i.e. 2 is searched for and then swapped with the element that is currently located at the first position, i.e.7. Now the minimum element in the remaining unsorted array is searched for and put in the second position, and so on.\n\n
+    </string>
+    <string name="counting">
+        Counting sort algorithm:\n\n
+        In Counting sort, the frequencies of distinct elements of the array to be sorted is counted and stored in an auxiliary array, by mapping its value as an index of the auxiliary array.\n
+        Algorithm:\n\n
+        Lets assume that, array  A of size  needs to be sorted.\n
+        Initialize the auxiliary array Aux[] as 0.\n
+        Note: The size of this array should be >=Max(A[])\n
+        Traverse array A  and store the count of occurrence of each element in the appropriate index of the  Aux array, which means, execute Aux[A[i]]++ for each , where  ranges from [0 to n-1].\n
+        Initialize the empty array sorted A[]\n
+        Traverse Aux[] array  and copy i  into sorted A for Aux[i]  number of times where Max(A[])>=i>=0.\n\n\n
+    </string>
+    <string name="insertion">
+        Insertion sort:\n\n
+        Insertion sort is based on the idea that one element from the input elements is consumed in each iteration to find its correct position i.e, the position to which it belongs in a sorted array.\n
+        It iterates the input elements by growing the sorted array at each iteration. It compares the current element with the largest value in the sorted array. If the current element is greater, then it leaves the element in its place and moves on to the next element else it finds its correct position in the sorted array and moves it to that position. This is done by shifting all the elements, which are larger than the current element, in the sorted array to one position ahead\n\n\n\n
+    </string>
+    <string name="linear">
+      Linear search: \n\n
+    another name of linear search is iterative search. its straight forward approach. steps for linear search follows: \n
+    step 1: take the input number which will be searched for\n
+    step 2:  start searching from the beginning of the array\n
+    step 3: if the current number is not equal to the key number, go next of the array\n
+    step 4: if current number is equal to the key number print yes, otherwise repeat the procedure 3\n\n\n
+    </string>
+    <string name="binary">
+        Binary search:\n
+    binary search is a searching technique which is faster than linear search. steps for binary search follows\n
+    step 1: first sort all the elements\n
+    step 2: set low and high, low will be zero and high will be total element number\n
+    step 3: take the mid value which will be (low+high)/2. if the value in this index is equal to the key print the mid as its our index\n
+    step 4: if the element of the mid index is greater than the key value, then set high as mid-1\n
+    step 5: if the element of the mid index is lesser than the key value, then set high as mid+1\n
+    step 6: repeat the procedure of 4 and 5 untill low is greater than equal to high\n\n
+    </string>
+    <string name="title_activity_resource">resource</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_resources">resources</string>
+    <string name="title_activity_front">front</string>
+    <string name="title_activity_frontpage">frontpage</string>
+    <string name="title_activity_likhon">likhon</string>
+</resources>

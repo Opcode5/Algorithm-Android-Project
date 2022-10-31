@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.algorithm">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".complexity"></activity>
+        <activity android:name=".login" />
+        <activity android:name=".resource" />
+        <activity android:name=".activity3" />
+        <activity android:name=".binary" />
+        <activity android:name=".linear" />
+        <activity android:name=".counting" />
+        <activity android:name=".insertion" />
+        <activity android:name=".selection" />
+        <activity android:name=".bubble" />
+        <activity android:name=".activity2" />
+        <activity android:name=".kruskal" />
+        <activity android:name=".prims" />
+        <activity android:name=".mst" />
+        <activity android:name=".bst" />
+        <activity android:name=".topsort" />
+        <activity android:name=".dfs" />
+        <activity android:name=".bfs" />
+        <activity android:name=".activity1" />
+        <activity
+            android:name=".likhon"
+            android:label="A L G O R I T H M"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".register">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
